@@ -53,4 +53,81 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Call once on init to handle page refreshing midway down the page
     handleScroll();
+
+    // ----------------------------------------------------------------------
+    // Modal Overlay Logic (Impressum & Datenschutz)
+    // ----------------------------------------------------------------------
+    const impressumBtn = document.getElementById('impressum-btn');
+    const datenschutzBtn = document.getElementById('datenschutz-btn');
+    const impressumModal = document.getElementById('impressum-modal');
+    const datenschutzModal = document.getElementById('datenschutz-modal');
+    const closeButtons = document.querySelectorAll('[data-close-modal]');
+
+    const openModal = (modal) => {
+        if (!modal) return;
+        modal.classList.add('is-visible');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeModal = (modal) => {
+        if (!modal) return;
+        modal.classList.remove('is-visible');
+        modal.setAttribute('aria-hidden', 'true');
+        // Only re-enable body overflow if mobile menu isn't open
+        if (!navList || !navList.classList.contains('is-open')) {
+            document.body.style.overflow = '';
+        }
+    };
+
+    const closeAllModals = () => {
+        if (impressumModal) closeModal(impressumModal);
+        if (datenschutzModal) closeModal(datenschutzModal);
+    };
+
+    if (impressumBtn && impressumModal) {
+        impressumBtn.addEventListener('click', (e) => {
+            // Open modal on click
+            e.preventDefault();
+            openModal(impressumModal);
+        });
+    }
+
+    if (datenschutzBtn && datenschutzModal) {
+        datenschutzBtn.addEventListener('click', (e) => {
+            // Open modal on click
+            e.preventDefault();
+            openModal(datenschutzModal);
+        });
+    }
+
+    closeButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const modal = e.target.closest('.modal-overlay');
+            if (modal) {
+                closeModal(modal);
+            } else {
+                closeAllModals();
+            }
+        });
+    });
+
+    // Close modal on Escape key press
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeAllModals();
+        }
+    });
+
+    // Check URL hash for modal opening (e.g. index.html#impressum)
+    const checkHash = () => {
+        const hash = window.location.hash.toLowerCase();
+        if (hash === '#impressum' && impressumModal) {
+            openModal(impressumModal);
+        } else if ((hash === '#datenschutz' || hash === '#privacy') && datenschutzModal) {
+            openModal(datenschutzModal);
+        }
+    };
+
+    checkHash();
 });
