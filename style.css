@@ -326,8 +326,7 @@ a {
     transform: translateY(8px) rotate(45deg);
 }
 
-.mobile-menu-toggle.is-active .hamburger::after {
-}
+.mobile-menu-toggle.is-active .hamburger::after {}
 
 .hero-content-wrapper {
     width: 90%;
@@ -379,11 +378,58 @@ a {
 }
 
 /* Welcome / Intro Text */
+.welcome-section {
+    position: relative;
+    overflow: hidden;
+    padding: 6rem 0;
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.welcome-bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.65;
+}
+
+.welcome-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(125, 125, 82, 0.4), rgba(51, 56, 59, 0.35));
+}
+
+.welcome-content {
+    position: relative;
+    z-index: 2;
+}
+
 .welcome-section .title-large {
     font-size: clamp(2rem, 4vw, 3rem);
     margin: 0;
     max-width: 800px;
     margin-inline: auto;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
 }
 
 .intro-section .lead-text {
@@ -447,6 +493,27 @@ a {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+}
+
+.about-image-wrapper {
+    position: relative;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.portrait-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.portrait-img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
 }
 
 .about-content h2 {
@@ -907,12 +974,15 @@ a {
     .modal-content {
         max-height: 90vh;
     }
+
     .modal-header {
         padding: 1rem 1.25rem;
     }
+
     .modal-body {
         padding: 1.25rem;
     }
+
     .legal-page-card {
         padding: 1.5rem;
     }

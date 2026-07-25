@@ -49,7 +49,15 @@
 
         <!-- Welcome Section -->
         <section id="welcome" class="section welcome-section bg-olive">
-            <div class="container text-center text-light">
+            <!-- Background Video (Infinite Loop) -->
+            <div class="welcome-video-wrapper" aria-hidden="true">
+                <video autoplay loop muted playsinline class="welcome-bg-video">
+                    <source src="media/background_herbs.webm" type="video/webm">
+                </video>
+                <div class="welcome-video-overlay"></div>
+            </div>
+
+            <div class="container text-center text-light welcome-content">
                 <h2 class="title-large">Auf eine natürliche Art<br>und Weise,<br>dein Gleichgewicht finden.</h2>
             </div>
         </section>
@@ -123,8 +131,7 @@
         <section id="about" class="section about-section bg-beige">
             <div class="container about-container grid-2-col">
                 <div class="about-image-wrapper">
-                    <!-- Placeholder for the B&W Portrait -->
-                    <img src="images/portrait.png" alt="Portrait von Tanja Brauen" class="placeholder-img portrait-img">
+                    <img src="images/portrait.png" alt="Portrait von Tanja Brauen" class="portrait-img">
                 </div>
                 <div class="about-content">
                     <h2>Über mich und meine Arbeit</h2>
@@ -155,7 +162,8 @@
             <div class="footer-top">
                 <h2 class="footer-heading">DU MÖCHTEST GERNE EINEN TERMIN BUCHEN?</h2>
                 <div class="footer-contact-methods">
-                    <a href="mailto:naturheilpraktikerinbern@gmail.com" class="footer-email">NATURHEILPRAKTIKERINBERN@GMAIL.COM</a>
+                    <a href="mailto:naturheilpraktikerinbern@gmail.com"
+                        class="footer-email">NATURHEILPRAKTIKERINBERN@GMAIL.COM</a>
                     <a href="tel:0766053030" class="footer-phone">076 605 30 30</a>
                 </div>
             </div>
@@ -205,7 +213,8 @@
     </footer>
 
     <!-- Impressum Modal -->
-    <div id="impressum-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="impressum-modal-title">
+    <div id="impressum-modal" class="modal-overlay" aria-hidden="true" role="dialog"
+        aria-labelledby="impressum-modal-title">
         <div class="modal-backdrop" data-close-modal></div>
         <div class="modal-content">
             <header class="modal-header">
@@ -223,7 +232,8 @@
                         Schweiz
                     </p>
                     <p>
-                        <strong>E-Mail:</strong> <a href="mailto:naturheilpraktikerinbern@gmail.com">naturheilpraktikerinbern@gmail.com</a><br>
+                        <strong>E-Mail:</strong> <a
+                            href="mailto:naturheilpraktikerinbern@gmail.com">naturheilpraktikerinbern@gmail.com</a><br>
                         <strong>Telefon:</strong> <a href="tel:0766053030">076 605 30 30</a>
                     </p>
                 </section>
@@ -237,17 +247,27 @@
                     <h3>Haftungsausschluss</h3>
                     <h4>Haftung für Inhalte</h4>
                     <p>
-                        Die Inhalte unserer Seiten wurden mit grösster Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann der Autor jedoch keine Gewähr übernehmen. Haftungsansprüche gegen den Autor wegen Schäden materieller oder immaterieller Art, welche aus dem Zugriff oder der Nutzung bzw. Nichtnutzung der veröffentlichten Informationen, durch Missbrauch der Verbindung oder durch technische Störungen entstanden sind, werden im gesetzlich zulässigen Rahmen ausgeschlossen.
+                        Die Inhalte unserer Seiten wurden mit grösster Sorgfalt erstellt. Für die Richtigkeit,
+                        Vollständigkeit und Aktualität der Inhalte kann der Autor jedoch keine Gewähr übernehmen.
+                        Haftungsansprüche gegen den Autor wegen Schäden materieller oder immaterieller Art, welche aus
+                        dem Zugriff oder der Nutzung bzw. Nichtnutzung der veröffentlichten Informationen, durch
+                        Missbrauch der Verbindung oder durch technische Störungen entstanden sind, werden im gesetzlich
+                        zulässigen Rahmen ausgeschlossen.
                     </p>
 
                     <h4>Haftung für Links</h4>
                     <p>
-                        Verweise und Links auf Webseiten Dritter liegen ausserhalb unseres Verantwortungsbereichs. Es wird jegliche Verantwortung für solche Webseiten abgelehnt. Der Zugriff und die Nutzung solcher Webseiten erfolgen auf eigene Gefahr des Nutzers oder der Nutzerin.
+                        Verweise und Links auf Webseiten Dritter liegen ausserhalb unseres Verantwortungsbereichs. Es
+                        wird jegliche Verantwortung für solche Webseiten abgelehnt. Der Zugriff und die Nutzung solcher
+                        Webseiten erfolgen auf eigene Gefahr des Nutzers oder der Nutzerin.
                     </p>
 
                     <h4>Urheberrechte</h4>
                     <p>
-                        Die Urheber- und alle anderen Rechte an Inhalten, Bildern, Fotos oder anderen Dateien auf dieser Website gehören ausschliesslich Tanja Brauen oder den speziell genannten Rechteinhabern. Für die Reproduktion jeglicher Elemente ist die schriftliche Zustimmung der Urheberrechtsträger im Voraus einzuholen.
+                        Die Urheber- und alle anderen Rechte an Inhalten, Bildern, Fotos oder anderen Dateien auf dieser
+                        Website gehören ausschliesslich Tanja Brauen oder den speziell genannten Rechteinhabern. Für die
+                        Reproduktion jeglicher Elemente ist die schriftliche Zustimmung der Urheberrechtsträger im
+                        Voraus einzuholen.
                     </p>
                 </section>
             </div>
@@ -255,7 +275,8 @@
     </div>
 
     <!-- Datenschutz Modal -->
-    <div id="datenschutz-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="datenschutz-modal-title">
+    <div id="datenschutz-modal" class="modal-overlay" aria-hidden="true" role="dialog"
+        aria-labelledby="datenschutz-modal-title">
         <div class="modal-backdrop" data-close-modal></div>
         <div class="modal-content">
             <header class="modal-header">
@@ -264,20 +285,25 @@
             </header>
             <div class="modal-body">
                 <p class="legal-intro">
-                    Gestützt auf Artikel 13 der Schweizerischen Bundesverfassung und die datenschutzrechtlichen Bestimmungen des Bundes (Datenschutzgesetz, DSG / nDSG) hat jede Person Anspruch auf Schutz ihrer Privatsphäre sowie auf Schutz vor Missbrauch ihrer persönlichen Daten. Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst.
+                    Gestützt auf Artikel 13 der Schweizerischen Bundesverfassung und die datenschutzrechtlichen
+                    Bestimmungen des Bundes (Datenschutzgesetz, DSG / nDSG) hat jede Person Anspruch auf Schutz ihrer
+                    Privatsphäre sowie auf Schutz vor Missbrauch ihrer persönlichen Daten. Wir nehmen den Schutz Ihrer
+                    persönlichen Daten sehr ernst.
                 </p>
 
                 <section class="legal-section">
                     <h3>1. Verantwortliche Stelle</h3>
                     <p>
-                        Verantwortlich für die Datenverarbeitung auf dieser Website gemäss Schweizer Datenschutzgesetz (nDSG) ist:
+                        Verantwortlich für die Datenverarbeitung auf dieser Website gemäss Schweizer Datenschutzgesetz
+                        (nDSG) ist:
                     </p>
                     <p>
                         <strong>Tanja Brauen</strong><br>
                         Schwarztorstrasse 108<br>
                         3007 Bern<br>
                         Schweiz<br>
-                        <strong>E-Mail:</strong> <a href="mailto:naturheilpraktikerinbern@gmail.com">naturheilpraktikerinbern@gmail.com</a><br>
+                        <strong>E-Mail:</strong> <a
+                            href="mailto:naturheilpraktikerinbern@gmail.com">naturheilpraktikerinbern@gmail.com</a><br>
                         <strong>Telefon:</strong> <a href="tel:0766053030">076 605 30 30</a>
                     </p>
                 </section>
@@ -285,32 +311,46 @@
                 <section class="legal-section">
                     <h3>2. Erhebung und Bearbeitung von Personendaten</h3>
                     <p>
-                        Wir bearbeiten in erster Linie die Personendaten, die wir im Rahmen unserer Kundinnen- und Kundenbeziehung sowie weiteren Geschäftsbeziehungen mit unseren Kundinnen, Patienten und anderen beteiligten Personen erhalten oder die wir beim Betrieb unserer Website von deren Nutzern erheben.
+                        Wir bearbeiten in erster Linie die Personendaten, die wir im Rahmen unserer Kundinnen- und
+                        Kundenbeziehung sowie weiteren Geschäftsbeziehungen mit unseren Kundinnen, Patienten und anderen
+                        beteiligten Personen erhalten oder die wir beim Betrieb unserer Website von deren Nutzern
+                        erheben.
                     </p>
                     <h4>a) Beim Besuch der Website (Server-Log-Files)</h4>
                     <p>
-                        Beim Zugriff auf unsere Website werden durch den Hosting-Provider automatisch Informationen in sogenannten Server-Log-Files erhoben und gespeichert (z.B. IP-Adresse, Datum und Uhrzeit des Zugriffs, verwendeter Browser und Betriebssystem). Diese Daten werden lediglich zur Sicherstellung eines störungsfreien Betriebs der Website und zur Verbesserung unseres Angebots ausgewertet.
+                        Beim Zugriff auf unsere Website werden durch den Hosting-Provider automatisch Informationen in
+                        sogenannten Server-Log-Files erhoben und gespeichert (z.B. IP-Adresse, Datum und Uhrzeit des
+                        Zugriffs, verwendeter Browser und Betriebssystem). Diese Daten werden lediglich zur
+                        Sicherstellung eines störungsfreien Betriebs der Website und zur Verbesserung unseres Angebots
+                        ausgewertet.
                     </p>
                     <h4>b) Kontaktaufnahme per E-Mail oder Telefon</h4>
                     <p>
-                        Wenn Sie uns per E-Mail oder Telefon kontaktieren, werden Ihre übermittelten Daten (z.B. Name, E-Mail-Adresse, Telefonnummer, Anliegen) zum Zweck der Bearbeitung der Anfrage und für allfällige Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+                        Wenn Sie uns per E-Mail oder Telefon kontaktieren, werden Ihre übermittelten Daten (z.B. Name,
+                        E-Mail-Adresse, Telefonnummer, Anliegen) zum Zweck der Bearbeitung der Anfrage und für
+                        allfällige Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre
+                        Einwilligung weiter.
                     </p>
                 </section>
 
                 <section class="legal-section">
                     <h3>3. Rechte der betroffenen Person (nDSG)</h3>
                     <p>
-                        Sie haben im Rahmen des auf Sie anwendbaren Datenschutzrechts und soweit darin vorgesehen das Recht auf Auskunft, Berichtigung, Löschung, das Recht auf Einschränkung der Datenbearbeitung und sonst dem Widerspruch gegen unsere Datenbearbeitungen.
+                        Sie haben im Rahmen des auf Sie anwendbaren Datenschutzrechts und soweit darin vorgesehen das
+                        Recht auf Auskunft, Berichtigung, Löschung, das Recht auf Einschränkung der Datenbearbeitung und
+                        sonst dem Widerspruch gegen unsere Datenbearbeitungen.
                     </p>
                     <p>
-                        Zur Geltendmachung Ihrer Rechte wenden Sie sich bitte per E-Mail an die im Impressum angegebene Adresse.
+                        Zur Geltendmachung Ihrer Rechte wenden Sie sich bitte per E-Mail an die im Impressum angegebene
+                        Adresse.
                     </p>
                 </section>
 
                 <section class="legal-section">
                     <h3>4. Datensicherheit</h3>
                     <p>
-                        Wir treffen angemessene technische und organisatorische Sicherheitsvorkehrungen zum Schutz Ihrer Personendaten vor unberechtigtem Zugriff und Missbrauch (z.B. HTTPS/SSL-Verschlüsselung).
+                        Wir treffen angemessene technische und organisatorische Sicherheitsvorkehrungen zum Schutz Ihrer
+                        Personendaten vor unberechtigtem Zugriff und Missbrauch (z.B. HTTPS/SSL-Verschlüsselung).
                     </p>
                 </section>
 
@@ -318,18 +358,23 @@
                     <h3>5. Dienste von Drittanbietern</h3>
                     <h4>Google Fonts</h4>
                     <p>
-                        Zur einheitlichen Darstellung von Schriftarten verwendet diese Seite Web Fonts von Google. Beim Aufruf einer Seite lädt Ihr Browser die benötigten Web Fonts in ihren Browser-Cache, um Texte und Schriftarten korrekt anzuzeigen.
+                        Zur einheitlichen Darstellung von Schriftarten verwendet diese Seite Web Fonts von Google. Beim
+                        Aufruf einer Seite lädt Ihr Browser die benötigten Web Fonts in ihren Browser-Cache, um Texte
+                        und Schriftarten korrekt anzuzeigen.
                     </p>
                     <h4>Social Media Links (Instagram)</h4>
                     <p>
-                        Auf unserer Website sind Verlinkungen zu unserem Instagram-Profil enthalten. Bei der blossen Verlinkung werden keine Daten an den Anbieter übertragen, erst beim Anklicken des entsprechenden Links werden Sie auf die Website des Anbieters weitergeleitet.
+                        Auf unserer Website sind Verlinkungen zu unserem Instagram-Profil enthalten. Bei der blossen
+                        Verlinkung werden keine Daten an den Anbieter übertragen, erst beim Anklicken des entsprechenden
+                        Links werden Sie auf die Website des Anbieters weitergeleitet.
                     </p>
                 </section>
 
                 <section class="legal-section">
                     <h3>6. Änderungen der Datenschutzerklärung</h3>
                     <p>
-                        Wir können diese Datenschutzerklärung jederzeit ohne Vorankündigung anpassen. Es gilt die jeweils aktuelle, auf unserer Website publizierte Fassung.
+                        Wir können diese Datenschutzerklärung jederzeit ohne Vorankündigung anpassen. Es gilt die
+                        jeweils aktuelle, auf unserer Website publizierte Fassung.
                     </p>
                     <p class="legal-date">Stand: Juli 2026</p>
                 </section>
