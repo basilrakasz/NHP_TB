@@ -168,8 +168,8 @@ a {
     height: 100vh;
     min-height: 600px;
     position: relative;
-    /* Hero Image (CSS fallback so text is visible) */
-    background: linear-gradient(rgba(51, 56, 59, 0.4), rgba(51, 56, 59, 0.4)), url('images/header.jpeg') center/cover no-repeat;
+    /* Hero Image with gray overlay so text is clearly visible and image is less bright */
+    background: linear-gradient(rgba(51, 56, 59, 0.48), rgba(51, 56, 59, 0.48)), url('images/header.jpeg') center/cover no-repeat;
     background-color: #555;
     /* fallback if no img */
     display: flex;
@@ -467,7 +467,7 @@ a {
 }
 
 .service-card {
-    text-align: center;
+    text-align: left;
 }
 
 .service-image-frame {
