@@ -331,14 +331,16 @@ a {
 .hero-content-wrapper {
     width: 90%;
     margin: 0 auto;
+    container-type: inline-size;
 }
 
 .hero-main-title {
     font-family: var(--font-heading);
-    font-size: clamp(1.8rem, 5.5vw, 6.5rem);
-    /* Scaled slightly smaller to prevent wide-font clipping */
+    /* Fluid font size tailored to ensure NATURHEILPRAKTIKERIN stays strictly on one line across all device displays */
+    font-size: clamp(0.9rem, 5vw, 6.2rem);
+    font-size: clamp(0.9rem, 5.5cqw, 6.2rem);
     margin: 0;
-    line-height: 1.05;
+    line-height: 1.08;
     color: var(--clr-white);
     text-transform: uppercase;
     text-align: left;
@@ -346,8 +348,12 @@ a {
     position: relative;
     z-index: 1;
     letter-spacing: 0.02em;
-    overflow-wrap: break-word;
-    /* Soft fallback if it still gets cramped */
+}
+
+.hero-title-main,
+.hero-title-city {
+    display: block;
+    white-space: nowrap;
 }
 
 
@@ -759,9 +765,7 @@ a {
     }
 
     .hero-main-title {
-        overflow-wrap: break-word;
-        word-break: break-word;
-        hyphens: auto;
+        hyphens: none;
     }
 
     .footer-bottom {
